@@ -2532,6 +2532,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tree-finder/base@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@tree-finder/base@npm:1.0.0"
+  dependencies:
+    regular-table: ^0.6.3
+    rxjs: ^7.8.1
+  checksum: 33f99f1cc0a98e5812436a5974d7f45b8ee1419185c2f1784eea56c874a435733366534d036618a76ca5452475f0fd83b62f74637053763e84b1d641baf60b40
+  languageName: node
+  linkType: hard
+
 "@types/babel__core@npm:^7.1.14":
   version: 7.20.3
   resolution: "@types/babel__core@npm:7.20.3"
@@ -6860,6 +6870,7 @@ __metadata:
     "@lumino/widgets": ^2.0.0
     "@material-ui/core": ^4.11.3
     "@rjsf/utils": ^5.13.2
+    "@tree-finder/base": ^1.0.0
     "@types/file-saver": ^2.0.1
     "@types/jest": ^29.5.1
     "@types/jszip": ^3.4.1
@@ -6887,7 +6898,6 @@ __metadata:
     semver: ^7.5.4
     shx: ^0.3.3
     source-map-loader: ^4.0.1
-    tree-finder: ^0.0.13
     ts-jest: ^29.1.0
     typescript: ^4.5.0
     yarn-deduplicate: ^6.0.0
@@ -8201,10 +8211,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"regular-table@npm:^0.4.0":
-  version: 0.4.3
-  resolution: "regular-table@npm:0.4.3"
-  checksum: 60d038b3520761aaf79968c9cac3099624d7c5db46e1cf7b35e7e641ca91e78dfc57ae60447975c96a902799ff2a49596bc3774478e50b533e403c3d37b5f804
+"regular-table@npm:^0.6.3":
+  version: 0.6.4
+  resolution: "regular-table@npm:0.6.4"
+  checksum: 2cad1b788b35129d23314aec275634c3f8f359e32e4ffdbac868e19622c5df9d384c5e632d2d600e75793c5be517ce375320cf80a4c2514b61c5a03ee5aed1ed
   languageName: node
   linkType: hard
 
@@ -8362,12 +8372,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rxjs@npm:^6.6.3":
-  version: 6.6.7
-  resolution: "rxjs@npm:6.6.7"
+"rxjs@npm:^7.8.1":
+  version: 7.8.1
+  resolution: "rxjs@npm:7.8.1"
   dependencies:
-    tslib: "npm:^1.9.0"
-  checksum: bc334edef1bb8bbf56590b0b25734ba0deaf8825b703256a93714308ea36dff8a11d25533671adf8e104e5e8f256aa6fdfe39b2e248cdbd7a5f90c260acbbd1b
+    tslib: ^2.1.0
+  checksum: de4b53db1063e618ec2eca0f7965d9137cabe98cf6be9272efe6c86b47c17b987383df8574861bcced18ebd590764125a901d5506082be84a8b8e364bf05f119
   languageName: node
   linkType: hard
 
@@ -9141,16 +9151,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tree-finder@npm:^0.0.13":
-  version: 0.0.13
-  resolution: "tree-finder@npm:0.0.13"
-  dependencies:
-    regular-table: "npm:^0.4.0"
-    rxjs: "npm:^6.6.3"
-  checksum: e79af06467dce96b622a9c28ec2db691f8384c5d0b4d6668ba42ee358a1da45ca529353480fd253a90d60017f5a1100e681c6d5069e5f4b02b558f45b3f76336
-  languageName: node
-  linkType: hard
-
 "ts-jest@npm:^29.1.0":
   version: 29.1.1
   resolution: "ts-jest@npm:29.1.1"
@@ -9196,14 +9196,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^1.8.1, tslib@npm:^1.9.0":
+"tslib@npm:^1.8.1":
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"
   checksum: dbe628ef87f66691d5d2959b3e41b9ca0045c3ee3c7c7b906cc1e328b39f199bb1ad9e671c39025bd56122ac57dfbf7385a94843b1cc07c60a4db74795829acd
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.5.0":
+"tslib@npm:^2.1.0, tslib@npm:^2.5.0":
   version: 2.6.2
   resolution: "tslib@npm:2.6.2"
   checksum: 329ea56123005922f39642318e3d1f0f8265d1e7fcb92c633e0809521da75eeaca28d2cf96d7248229deb40e5c19adf408259f4b9640afd20d13aecc1430f3ad

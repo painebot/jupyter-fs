@@ -36,7 +36,7 @@ import { CommandRegistry } from "@lumino/commands";
 import { PromiseDelegate } from "@lumino/coreutils";
 import { Message } from "@lumino/messaging";
 import { PanelLayout, Widget } from "@lumino/widgets";
-import { Content, ContentsModel, Format, Path, TreeFinderGridElement, TreeFinderPanelElement } from "tree-finder";
+import { Content, ContentsModel, Format, Path, TreeFinderGridElement, TreeFinderPanelElement } from "@tree-finder/base";
 
 import { JupyterClipboard } from "./clipboard";
 import { commandIDs, idFromResource } from "./commands";

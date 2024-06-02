@@ -23,7 +23,7 @@ import {
 } from "@jupyterlab/ui-components";
 import { DisposableSet, IDisposable } from "@lumino/disposable";
 import { Menu } from "@lumino/widgets";
-import { Content, Path } from "tree-finder";
+import { Content, Path } from "@tree-finder/base";
 
 
 import { JupyterClipboard } from "./clipboard";
