@@ -1,23 +1,24 @@
 <p align="center">
-<a href="https://github.com/jpmorganchase/jupyter-fs/blob/main/docs/brand-icon.png?raw=true#gh-light-mode-only">
-<img src="https://github.com/jpmorganchase/jupyter-fs/raw/main/docs/brand-icon.png?raw=true#gh-light-mode-only" alt="jupyter-fs" width="260">
+<a href="https://github.com/jpmorganchase/jupyter-fs/blob/main/docs/img/brand-icon.png?raw=true#gh-light-mode-only">
+<img src="https://github.com/jpmorganchase/jupyter-fs/raw/main/docs/img/brand-icon.png?raw=true#gh-light-mode-only" alt="jupyter-fs" width="260">
 </a>
-<a href="https://github.com/jpmorganchase/jupyter-fs/blob/main/docs/brand-icon-white-text.png?raw=true#gh-dark-mode-only">
-<img src="https://github.com/jpmorganchase/jupyter-fs/raw/main/docs/brand-icon-white-text.png?raw=true#gh-dark-mode-only" alt="jupyter-fs" width="260">
+<a href="https://github.com/jpmorganchase/jupyter-fs/blob/main/docs/img/brand-icon-white-text.png?raw=true#gh-dark-mode-only">
+<img src="https://github.com/jpmorganchase/jupyter-fs/raw/main/docs/img/brand-icon-white-text.png?raw=true#gh-dark-mode-only" alt="jupyter-fs" width="260">
 </a>
 </p>
 
 #
 
 <p align="center">
-<a href="https://github.com/jpmorganchase/jupyter-fs/actions?query=workflow%3A%22Build+Status%22"><img alt="build status" src="https://github.com/jpmorganchase/jupyter-fs/actions/workflows/build.yml/badge.svg?branch=main"></a>
+<a href="https://github.com/jpmorganchase/jupyter-fs/actions/workflows/build.yml"><img alt="build status" src="https://github.com/jpmorganchase/jupyter-fs/actions/workflows/build.yml/badge.svg?branch=main&event=push"></a>
 <a href="https://pypi.python.org/pypi/jupyter-fs"><img alt="pypi package" src="https://img.shields.io/pypi/v/jupyter-fs.svg"></a>
 <a href="https://www.npmjs.com/package/jupyter-fs"><img alt="npm package" src="https://img.shields.io/npm/v/jupyter-fs.svg"></a>
+<a href="https://mybinder.org/v2/gh/jpmorganchase/jupyter-fs/main?urlpath=lab"><img alt="binder link" src="https://mybinder.org/badge_logo.svg"></a>
 </p>
 
 A plugin for JupyterLab that lets you set up and use as many filebrowsers as you like, connected to whatever local and/or remote filesystem-like resources you want.
 
-The backend is built on top of [PyFilesystem](https://github.com/PyFilesystem/pyfilesystem2), while the frontend is built on top of [JupyterLab Filetree](https://github.com/youngthejames/jupyterlab_filetree).
+The backend is built on top of [PyFilesystem](https://github.com/PyFilesystem/pyfilesystem2) and [fsspec](https://filesystem-spec.readthedocs.io/en/latest/), while the frontend is built on top of [tree-finder](https://github.com/tree-finder/tree-finder).
 
 
 ## Install
@@ -73,7 +74,7 @@ Add specifications for additional contents managers in your user settings (in th
 
 You should see your new filebrowsers pop up in the left-hand sidebar instantly when you save your settings:
 
-![](https://raw.githubusercontent.com/jpmorganchase/jupyter-fs/main/docs/osfs_example.png)
+![](https://raw.githubusercontent.com/jpmorganchase/jupyter-fs/main/docs/img/osfs_example.png)
 
 
 ## Use with auth/credentials
@@ -95,7 +96,7 @@ Any stretch of a `"url"` that is enclosed in double-brackets `{{VAR}}` will be t
 
 When you save the above `"resouces"` config, a dialog box will pop asking for the `username` and `passwd` values:
 
-![](https://raw.githubusercontent.com/jpmorganchase/jupyter-fs/main/docs/remote_example.png)
+![](https://raw.githubusercontent.com/jpmorganchase/jupyter-fs/main/docs/img/remote_example.png)
 
 Once you enter those values and hit ok, the new filebrowsers will then immediately appear in the sidebar:
 

@@ -6,10 +6,10 @@
 # the Apache License 2.0.  The full license can be found in the LICENSE file.
 #
 
+from unittest.mock import patch
+
 from jupyterfs import _jupyter_labextension_paths, open_fs
 from jupyterfs.extension import _jupyter_server_extension_points
-
-from unittest.mock import patch
 
 
 class TestInit:
