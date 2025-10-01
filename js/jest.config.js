@@ -44,5 +44,5 @@ module.exports = {
     ],
     "\\.jsx?$": "babel-jest",
   },
-  transformIgnorePatterns: [`node_modules/.pnpm/(?!(${esModules}))`],
+  transformIgnorePatterns: [`/node_modules/.pnpm/(?!(${esModules}))`],
 };

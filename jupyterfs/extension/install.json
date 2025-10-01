@@ -1,6 +1,5 @@
 {
-    "packageManager": "python",
-    "packageName": "jupyter-fs",
-    "uninstallInstructions": "Use your Python package manager (pip, conda, etc.) to uninstall the package jupyter-fs"
-  }
-  
+  "packageManager": "python",
+  "packageName": "jupyter-fs",
+  "uninstallInstructions": "Use your Python package manager (pip, conda, etc.) to uninstall the package jupyter-fs"
+}

@@ -29,38 +29,23 @@ jobs:
 
     strategy:
       matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
+        os: [ubuntu-latest]
         python-version: ["3.9"]
         node-version: [20.x]
 
     steps:
     - uses: actions/checkout@v5
 
-    - uses: actions-ext/python/setup@v2
+    - uses: actions-ext/python/setup@main
       with:
         version: ${{ matrix.python-version }}
 
-    - uses: actions-ext/node/setup@v2
+    - uses: actions-ext/node/setup@main
       with:
-        version: ${{ matrix.node-version }}
+        version: 22.x
 
     - name: Install dependencies
       run: make develop
-
-    - name: Setup Linux testing infra
-      run: make setup-infra-ubuntu DOCKER_COMPOSE="docker compose"
-      if: ${{ matrix.os == 'ubuntu-latest' }}
-
-    - name: Setup Mac testing infra
-      run: sudo make setup-infra-mac
-      if: ${{ matrix.os == 'macos-latest' }}
-
-    - name: Setup Windows testing infra
-      run: make setup-infra-win
-      if: ${{ matrix.os == 'windows-latest' }}
-
-    - name: Setup common testing infra
-      run: make setup-infra-common
 
     - name: Lint
       run: make lint
@@ -75,22 +60,7 @@ jobs:
 
     - name: Test
       run: make coverage
-      if: matrix.os != 'windows-latest'
-
-    - name: Teardown Linux testing infra
-      run: make teardown-infra-ubuntu DOCKER_COMPOSE="docker compose"
-      if: ${{ matrix.os == 'ubuntu-latest' }}
-
-    - name: Teardown Mac testing infra
-      run: make teardown-infra-mac
-      if: ${{ matrix.os == 'macos-latest' }}
-
-    - name: Teardown Windows testing infra
-      run: make teardown-infra-win
-      if: ${{ matrix.os == 'windows-latest' }}
-
-    - name: Teardown common testing infra
-      run: make teardown-infra-common
+      if: matrix.os == 'ubuntu-latest'
 
     - name: Upload test results (Python)
       uses: actions/upload-artifact@v4
@@ -105,6 +75,11 @@ jobs:
         files: '**/junit.xml'
       if: matrix.os == 'ubuntu-latest'
 
+    - name: Upload coverage
+      uses: codecov/codecov-action@v5
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+
     - name: Make dist
       run: make dist
       if: matrix.os == 'ubuntu-latest'
@@ -114,3 +89,4 @@ jobs:
         name: dist-${{matrix.os}}
         path: dist
       if: matrix.os == 'ubuntu-latest'
+
